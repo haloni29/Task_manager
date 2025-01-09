@@ -1,0 +1,45 @@
+#Tablero_tareas{
+  border: 5px solid #0008ff;
+  margin: 0px 50% 0px 20px;
+}
+
+.Tarea{
+  margin: 15px 10px 15px 10px;
+  border: 2px solid white;
+}
+.Titulo_tarea{
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+}
+h2{
+  margin-left: 10px;
+}
+.Parte_arriba{
+  display: flex;
+  justify-content: space-between;
+}
+.botones{
+  margin-top: 25px;
+  margin-right: 15px;
+}
+.botones button{
+  margin-left: 10px;
+  background-color: black;
+  color: white;
+  border: #0008ff solid 2px;
+}
+
+#Put:hover{
+  cursor: pointer;
+  background-color: rgb(54, 54, 254);
+  color: black;
+}
+#Del:hover{
+  cursor: pointer;
+  
+}
+
+p{
+  margin: 0px 10px 10px 10px
+}
