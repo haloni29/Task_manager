@@ -1,3 +1,20 @@
+header{
+  display: flex;
+  justify-content: space-between;
+}
+#Post{
+  background-color: black;
+  color: white; 
+  border: 2px solid #0008ff;
+  margin: 20px;
+}
+#Post:hover{
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+
 #Tablero_tareas{
   border: 5px solid #0008ff;
   margin: 0px 50% 0px 20px;
@@ -32,12 +49,15 @@ h2{
 
 #Put:hover{
   cursor: pointer;
-  background-color: rgb(54, 54, 254);
-  color: black;
+  border: none;
+  background-color: green;
+  border: green solid 2px;
 }
 #Del:hover{
   cursor: pointer;
-  
+  border: none;
+  background-color: red;
+  border: red solid 2px;
 }
 
 p{
