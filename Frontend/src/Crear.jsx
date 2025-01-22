@@ -1,27 +1,29 @@
 import { useState } from "react"
-import { createData } from "./services/API"
+import { createData, fetchData } from "./services/API"
 import './Crear.css'
 
-export const Crear = () => {
+export const Crear = ({ onTareaCreada }) => {
     const [titulo, setTitulo] = useState('')
     const [descripcion, setDescripcion] = useState('')
-    const [Data, setData] = useState(null)
+    const [Data, setData] = useState({ Tarea: []})
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         try{
             const nuevaTarea = await createData(titulo, descripcion)
-            setData((prevData) => ({
-                ...prevData,
-                Tarea: [...prevData.Tarea, nuevaTarea]
-            }));
+            const tareaCreada = (nuevaTarea) => {
+                setData((prevData) => [...prevData, nuevaTarea]);
+            };
+            
             setTitulo('')
             setDescripcion('')
         }
         catch (error){
-            console.error(error, 'err no se ha creado la tarea')
+            console.error(error, 'err no se ha creado la tarea', error)
         }
     }
+
+    
 
     return(
         <>
